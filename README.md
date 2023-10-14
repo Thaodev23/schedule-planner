@@ -1,5 +1,9 @@
 # Schedule Planner
 
+https://thaodev23.github.io/schedule-planner/
+
+https://github.com/Thaodev23/schedule-planner
+
 ## User Story
 
 ```

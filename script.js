@@ -83,14 +83,16 @@ $(function () {
  //  Below: 9 can be used as a value in the for-loop.
  for (var k = 9; k < 18; k++) {
  numbHr = k; 
+ //  Below: changeTime function is being used inside the for-loop.
+ // (Below: what is the purpose of the changeTime????)
  changeTime();
  if (currentHour > k ) {
  
-
-//  Below: changeTime was placed before the time block.
-//  changeTime();
+ //  Below: changeTime was placed before the time block.
+ //  changeTime();
 
  // Below: the k has to be in the for loop in order to make multiple blocks.
+//  (Below: explain the scenario variable below????)
  const pastBlock =$(`<div id="hour-${k}" class="row time-block past">
  <div class="col-2 col-md-1 hour text-center py-3" id="hour${k}">${numbHr}</div>
  <textarea class="col-8 col-md-10 description" rows="3"> </textarea>
@@ -130,14 +132,14 @@ $(function () {
   //
   // TODO: Add code to display the current date in the header of the page.
 
-//  Below: (numbHr) is a initialize variable (parameters).
+ //  Below: changeTime function is to switch from military time to normal time.
  function changeTime () {
   if (numbHr > 12) {
     numbHr = numbHr - 12
     // Below: toString convert the number into a string. Number cannot add with strings so that is why we have to do this below.
     numbHr = numbHr.toString()
+    // Below: space have to be place between the " and PM in order for space to appear between PM and the hour in the browser. 
     numbHr = numbHr + " PM"
-    // Below: return the output. 
     
   }
   
@@ -154,16 +156,20 @@ $(function () {
   }
 
  }
-
+ //  Below: is the button to save the info into the local storage and the input data onto the calendar in the web browser. jquery version of event listener.
  $(".btn").on("click", saveInfo);
 
+ // Below: is the function to save the data into the local storage. 
+ // Below: what is the (event)?????
  function saveInfo(event) {
   event.preventDefault(); 
+  // Below: ????????????
   localStorage.setItem($(this).siblings(".hour").text(),$(this).siblings(".description").val());
   
  }
 
 //  Below: render save button. 
+// Below: explain the whole process??????
 for (var k = 9; k < 17; k++ ) {
   // var key = $(`#hour${k}`).text();
   var key = $(`#hour-${k} div:first-child`).text();
