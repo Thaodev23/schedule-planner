@@ -48,7 +48,12 @@ var toDoList = [
 {
   time: 16,
   description: "" 
-}
+},
+
+{
+  time: 17,
+  description: "" 
+},
 
 ]
 
@@ -76,7 +81,7 @@ $(function () {
  //  cardGroup.append(pastBlock);
 
  //  Below: 9 can be used as a value in the for-loop.
- for (var k = 9; k < 17; k++) {
+ for (var k = 9; k < 18; k++) {
  numbHr = k; 
  changeTime();
  if (currentHour > k ) {
@@ -84,6 +89,7 @@ $(function () {
 
 //  Below: changeTime was placed before the time block.
 //  changeTime();
+
  // Below: the k has to be in the for loop in order to make multiple blocks.
  const pastBlock =$(`<div id="hour-${k}" class="row time-block past">
  <div class="col-2 col-md-1 hour text-center py-3" id="hour${k}">${numbHr}</div>
@@ -123,6 +129,7 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
+
 //  Below: (numbHr) is a initialize variable (parameters).
  function changeTime () {
   if (numbHr > 12) {
@@ -157,7 +164,7 @@ $(function () {
  }
 
 //  Below: render save button. 
-for (var k = 9; k < 16; k++ ) {
+for (var k = 9; k < 17; k++ ) {
   // var key = $(`#hour${k}`).text();
   var key = $(`#hour-${k} div:first-child`).text();
   console.log(key);
