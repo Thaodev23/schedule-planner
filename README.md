@@ -33,8 +33,8 @@ THEN the data will be saved in the time-blocks even if I refresh the web page
 
 Below: Image of the schedule to plan out the class works.
 
-![Alt text](pic1.png)
-![schedule](./Assets/05-third-party-apis-homework-demo.gif)
+<!-- ![Alt text](pic1.png) -->
+![schedule](./Assets/pic1.png)
 
 ## Collaborators
 
